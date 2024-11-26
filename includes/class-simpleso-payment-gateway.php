@@ -11,7 +11,7 @@ class SIMPLESO_PAYMENT_GATEWAY extends WC_Payment_Gateway_CC
 	const ID = 'simpleso';
 
 	// Define constants for SIP URLs
-	const SIP_HOST = 'www.simple-so.lcl'; // Live SIP host 
+	const SIP_HOST = 'www.simpleso.io'; // Live SIP host 
 
 	private $sip_protocol; // Protocol (http:// or https://)
 
