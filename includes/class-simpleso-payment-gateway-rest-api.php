@@ -83,9 +83,6 @@ class SIMPLESO_PAYMENT_GATEWAY_REST_API
 		$order_id = isset($parameters['order_id']) ? intval($parameters['order_id']) : 0;
 		$api_order_status = isset($parameters['order_status']) ? sanitize_text_field($parameters['order_status']) : '';
 
-		// Log incoming request with sanitized parameters
-		$this->logger->info('SimpleSo API Request Received: ' . print_r($parameters, true), array('source' => 'simpleso_payment_gateway'));
-
 		// Verify API key
 		if (!$this->simpleso_verify_api_key(base64_decode($api_key))) {
 			$this->logger->error('Unauthorized access attempt.', array('source' => 'simpleso_payment_gateway'));
@@ -125,7 +122,7 @@ class SIMPLESO_PAYMENT_GATEWAY_REST_API
 			$order_status = $order->get_status();
 		}
 
-		$updated = $order->update_status($order_status, __('Order status updated via API', 'woocommerce'));
+		$updated = $order->update_status($order_status, __('Order status updated via API', 'simpleso-payment-gateway'));
 
 		if (WC()->cart) {
 			// Remove cart

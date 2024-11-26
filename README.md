@@ -7,18 +7,18 @@ The SimpleSo Payment Gateway plugin for WooCommerce 8.9+ allows you to accept fi
 **Contributors:** SimpleSo  
 **Tags:** woocommerce, payment gateway, fiat, SimpleSo  
 **Requires at least:** 6.2  
-**Tested up to:** 6.2  
+**Tested up to:** 6.7  
 **Stable tag:** 1.0.8  
 **License:** GPLv3 or later  
 **License URI:** [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ## Support
 
-For any issues or enhancement requests with this plugin, please contact the DFin support team. Ensure you provide your plugin, WooCommerce, and WordPress version where applicable to expedite troubleshooting.
+For any issues or enhancement requests with this plugin, please contact the SimpleSo support team. Ensure you provide your plugin, WooCommerce, and WordPress version where applicable to expedite troubleshooting.
 
 ## Getting Started
 
-1. Obtain your API keys from your DFin dashboard in your Developer Settings - API Keys.
+1. Obtain your API keys from your SimpleSo dashboard in your Developer Settings - API Keys.
 2. Follow the plugin installation instructions below.
 3. You are ready to take payments in your WooCommerce store!
 
@@ -33,7 +33,7 @@ For any issues or enhancement requests with this plugin, please contact the DFin
 
 ## 1. Download Plugin from GitHub
 
-- Visit the GitHub repository for the SimpleSo Payment Gateway plugin at [GitHub Repository URL](https://github.com/dfin-ai/dfin-sell-payment-gateway).
+- Visit the GitHub repository for the SimpleSo Payment Gateway plugin at [GitHub Repository URL](https://github.com/dfin-ai/simpleso-payment-gateway).
 - Download the plugin ZIP file to your local machine.
 
 ## 2. Install the Plugin in WordPress
@@ -56,10 +56,10 @@ For any issues or enhancement requests with this plugin, please contact the DFin
   - Locate the SimpleSo Payment Gateway plugin in the list.
   - Click `Activate` to enable the plugin.
 
-## 4. Obtain API Keys from DFin Developer Settings Dashboard
+## 4. Obtain API Keys from SimpleSo Developer Settings Dashboard
 
-- **Log in to DFin Account:**
-  Visit the DFin website and log in to your account.
+- **Log in to SimpleSo Account:**
+  Visit the SimpleSo website and log in to your account.
 - **Navigate to Developer Settings to get API Keys:**
   Once logged in, find and access the Developer Settings.
 - **Generate or Retrieve API Keys:**
@@ -77,7 +77,7 @@ For any issues or enhancement requests with this plugin, please contact the DFin
 - **Select SimpleSo Payment Gateway:**
   Scroll down to find and select the SimpleSo Payment Gateway among the available payment methods.
 - **Enter API Keys and Order Status:**
-  Enter the API keys obtained from your DFin account into the respective fields:
+  Enter the API keys obtained from your SimpleSo account into the respective fields:
   - Title: SimpleSo Payment Gateway
   - Description: Secure payments with SimpleSo Payment Gateway.
   - Public Key: [Your Public Key]
@@ -88,7 +88,7 @@ For any issues or enhancement requests with this plugin, please contact the DFin
 - **Save Changes:**
   Click `Save changes` at the bottom of the page to update and save your API key settings.
 
-## 6. Place Order via DFin Payment Option
+## 6. Place Order via SimpleSo Payment Option
 
 - **Visit Your Store Page and Add Products to Cart:**
   Navigate to your WordPress site's store page.
@@ -106,7 +106,7 @@ For any issues or enhancement requests with this plugin, please contact the DFin
 ## 7. Popup Window for Payment
 
 - **Secure Payment Processing:**
-  Upon selecting DFin, a secure popup window will open for payment processing.
+  Upon selecting SimpleSo, a secure popup window will open for payment processing.
 
 ## 8. Complete the Payment Process
 
@@ -128,7 +128,7 @@ For any issues or enhancement requests with this plugin, please contact the DFin
 
 ## Documentation
 
-The official documentation for this plugin is available at: [https://www.dfin.ai/api/docs/wordpress-plugin](https://www.dfin.ai/api/docs/wordpress-plugin)
+The official documentation for this plugin is available at: [https://www.simpleso.io/api/docs/wordpress-plugin](https://www.simpleso.io/api/docs/wordpress-plugin)
 
 ## Changelog
 
@@ -174,8 +174,8 @@ The official documentation for this plugin is available at: [https://www.dfin.ai
 
 ## Support
 
-For customer support, visit: [https://www.dfin.ai/reach-out](https://www.dfin.ai/reach-out)
+For customer support, visit: [https://www.simpleso.io/contact-us](https://www.simpleso.io/contact-us)
 
 ## Why Choose SimpleSo Payment Gateway?
 
-With the SimpleSo Payment Gateway, you can easily transfer fiat payments to sell products. Choose SimpleSo Payment Gateway as your WooCommerce payment gateway to access your funds quickly through a powerful and secure payment engine provided by DFin.
+With the SimpleSo Payment Gateway, you can easily transfer fiat payments to sell products. Choose SimpleSo Payment Gateway as your WooCommerce payment gateway to access your funds quickly through a powerful and secure payment engine provided by SimpleSo.

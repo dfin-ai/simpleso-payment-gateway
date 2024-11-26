@@ -4,7 +4,7 @@
  * Plugin Name: SimpleSo Payment Gateway
  * Description: This plugin allows you to accept payments in USD through a secure payment gateway integration. Customers can complete their payment process with ease and security.
  * Author: SimpleSo
- * Author URI: https://www.dfin.ai/
+ * Author URI: https://www.simpleso.io
  * Text Domain: simpleso-payment-gateway
  * Plugin URI: https://github.com/dfin-ai/simpleso-payment-gateway
  * Version: 1.0.8

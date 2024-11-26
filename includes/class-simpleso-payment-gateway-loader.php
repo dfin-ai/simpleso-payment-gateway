@@ -110,8 +110,8 @@ class SIMPLESO_PAYMENT_GATEWAY_Loader
 	{
 		if (plugin_basename(SIMPLESO_PAYMENT_GATEWAY_FILE) === $file) {
 			$row_meta = [
-				'docs'    => '<a href="' . esc_url(apply_filters('simpleso_docs_url', 'https://www.dfin.ai/api/docs/wordpress-plugin')) . '" target="_blank">' . esc_html__('Documentation', 'simpleso-payment-gateway') . '</a>',
-				'support' => '<a href="' . esc_url(apply_filters('simpleso_support_url', 'https://www.dfin.ai/reach-out')) . '" target="_blank">' . esc_html__('Support', 'simpleso-payment-gateway') . '</a>',
+				'docs'    => '<a href="' . esc_url(apply_filters('simpleso_docs_url', 'https://www.simpleso.io/api/docs/wordpress-plugin')) . '" target="_blank">' . esc_html__('Documentation', 'simpleso-payment-gateway') . '</a>',
+				'support' => '<a href="' . esc_url(apply_filters('simpleso_support_url', 'https://www.simpleso.io/contact-us')) . '" target="_blank">' . esc_html__('Support', 'simpleso-payment-gateway') . '</a>',
 			];
 
 			$links = array_merge($links, $row_meta);

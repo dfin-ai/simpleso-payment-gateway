@@ -11,7 +11,7 @@ class SIMPLESO_PAYMENT_GATEWAY extends WC_Payment_Gateway_CC
 	const ID = 'simpleso';
 
 	// Define constants for SIP URLs
-	const SIP_HOST = 'www.simpleso.io'; // Live SIP host 
+	const SIP_HOST = 'www.simple-so.lcl'; // Live SIP host 
 
 	private $sip_protocol; // Protocol (http:// or https://)
 
@@ -286,7 +286,7 @@ class SIMPLESO_PAYMENT_GATEWAY extends WC_Payment_Gateway_CC
 		if (isset($transaction_limit_response_data['error'])) {
 			// Display error message to the user
 			wc_add_notice(
-				__('Payment error: ', 'woocommerce') . "SimpleSo payment method is currently unavailable. Please contact support for assistance.",
+				__('Payment error: ', 'simpleso-payment-gateway') . "SimpleSo payment method is currently unavailable. Please contact support for assistance.",
 				'error'
 			);
 
@@ -307,9 +307,6 @@ class SIMPLESO_PAYMENT_GATEWAY extends WC_Payment_Gateway_CC
 		$order->update_meta_data('_order_origin', 'simpleso_payment_gateway');
 		$order->save();
 
-		// Log the request data (optional)
-		wc_get_logger()->info('SimpleSo Payment Request: ' . print_r($data, true), array('source' => 'simpleso_payment_gateway'));
-
 		// Send the data to the API
 		$response = wp_remote_post($cleanUrl, array(
 			'method'    => 'POST',
@@ -327,7 +324,7 @@ class SIMPLESO_PAYMENT_GATEWAY extends WC_Payment_Gateway_CC
 		if (is_wp_error($response)) {
 			// Log the error message
 			wc_get_logger()->error('SimpleSo Payment Request Error: ' . $response->get_error_message(), array('source' => 'simpleso_payment_gateway'));
-			wc_add_notice(__('Payment error: Unable to process payment.', 'woocommerce') . ' ' . $response->get_error_message(), 'error');
+			wc_add_notice(__('Payment error: Unable to process payment.', 'simpleso-payment-gateway') . ' ' . $response->get_error_message(), 'error');
 			return array('result' => 'fail');
 		} else {
 			$response_code = wp_remote_retrieve_response_code($response);
@@ -346,7 +343,7 @@ class SIMPLESO_PAYMENT_GATEWAY extends WC_Payment_Gateway_CC
 			isset($response_data['data']['payment_link']) && !empty($response_data['data']['payment_link'])
 		) {
 			// Update the order status
-			$order->update_status('pending', __('Payment pending.', 'woocommerce'));
+			$order->update_status('pending', __('Payment pending.', 'simpleso-payment-gateway'));
 
 			// Check if the note already exists
 			$existing_notes = $order->get_customer_order_notes();
@@ -379,7 +376,7 @@ class SIMPLESO_PAYMENT_GATEWAY extends WC_Payment_Gateway_CC
 			// Handle API error response
 			if (isset($response_data['status']) && $response_data['status'] === 'error') {
 				// Initialize an error message
-				$error_message = isset($response_data['message']) ? sanitize_text_field($response_data['message']) : __('Unable to retrieve payment link.', 'woocommerce');
+				$error_message = isset($response_data['message']) ? sanitize_text_field($response_data['message']) : __('Unable to retrieve payment link.', 'simpleso-payment-gateway');
 
 				// Check if there are validation errors and handle them
 				if (isset($response_data['errors']) && is_array($response_data['errors'])) {
@@ -393,12 +390,12 @@ class SIMPLESO_PAYMENT_GATEWAY extends WC_Payment_Gateway_CC
 				}
 
 				// Add the error message to WooCommerce notices
-				wc_add_notice(__('Payment error: ', 'woocommerce') . $error_message, 'error');
+				wc_add_notice(__('Payment error: ', 'simpleso-payment-gateway') . $error_message, 'error');
 
 				return array('result' => 'fail');
 			} else {
 				// Add the error message to WooCommerce notices
-				wc_add_notice(__('Payment error: ', 'woocommerce') . $response_data['error'], 'error');
+				wc_add_notice(__('Payment error: ', 'simpleso-payment-gateway') . $response_data['error'], 'error');
 				return array('result' => 'fail');
 			}
 		}
